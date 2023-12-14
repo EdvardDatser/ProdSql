@@ -44,6 +44,7 @@
             this.KustutaKat = new System.Windows.Forms.Button();
             this.PictureBox = new System.Windows.Forms.PictureBox();
             this.imagebtn = new System.Windows.Forms.Button();
+            this.Ostabtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
@@ -184,9 +185,9 @@
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(774, 12);
+            this.PictureBox.Location = new System.Drawing.Point(678, 12);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(297, 251);
+            this.PictureBox.Size = new System.Drawing.Size(424, 189);
             this.PictureBox.TabIndex = 16;
             this.PictureBox.TabStop = false;
             // 
@@ -200,11 +201,22 @@
             this.imagebtn.UseVisualStyleBackColor = true;
             this.imagebtn.Click += new System.EventHandler(this.imagebtn_Click);
             // 
+            // Ostabtn
+            // 
+            this.Ostabtn.Location = new System.Drawing.Point(678, 224);
+            this.Ostabtn.Name = "Ostabtn";
+            this.Ostabtn.Size = new System.Drawing.Size(101, 23);
+            this.Ostabtn.TabIndex = 20;
+            this.Ostabtn.Text = "Osta";
+            this.Ostabtn.UseVisualStyleBackColor = true;
+            this.Ostabtn.Click += new System.EventHandler(this.Ostabtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 633);
+            this.Controls.Add(this.Ostabtn);
             this.Controls.Add(this.imagebtn);
             this.Controls.Add(this.PictureBox);
             this.Controls.Add(this.KustutaKat);
@@ -249,6 +261,7 @@
         private System.Windows.Forms.Button KustutaKat;
         private System.Windows.Forms.PictureBox PictureBox;
         private System.Windows.Forms.Button imagebtn;
+        private System.Windows.Forms.Button Ostabtn;
     }
 }
 

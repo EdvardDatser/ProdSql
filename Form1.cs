@@ -6,9 +6,14 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Microsoft.VisualBasic;
+using Aspose.Pdf;
+using Image = System.Drawing.Image;
 
 namespace ProdSql
 {
@@ -248,6 +253,55 @@ namespace ProdSql
                 PictureBox.Image = null;
             }
         }
+
+        Document document;
+        private void Ostabtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                document = new Document();//using Aspose.Pdf
+                var page = document.Pages.Add();
+                page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment("Product  Price  Quanty Summ"));
+                foreach (var Products in Tooded_list)
+                {
+                    page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment(Products));//
+                }
+                document.Save(@"..\..\Arved\Arve_.pdf");
+                document.Dispose();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Viga");
+            }       
+        }
+        List<string> Tooded_list = new List<string>();
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    string adress = Interaction.InputBox("Sisesta e-mail", "Kuhu saada", "edvard.datser@tthk.ee");
+        //    try
+        //    {
+        //        MailMessage mail = new MailMessage();
+        //        SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
+        //        {
+        //            Port = 587,
+        //            Credentials = new System.Net.NetworkCredential("pochta", "2.Kuursus"),
+        //            EnableSsl = true
+        //        };
+        //        mail.From = new MailAddress("pochta");
+        //        mail.To.Add(adress);
+        //        mail.Subject = "Arve";
+        //        mail.Body = "Arve on ostetud ja ta on maanuses";
+        //        mail.Attachments.Add(new Attachment(@"..\..\Arved\Arve_.pdf"));
+        //        smtpClient.Send(mail);
+        //        MessageBox.Show("Arve oli saadetud mailile: " + adress);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Viga");
+        //    }
+        //}
 
         public void Andmed()
         {
