@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProdSql
 {
-    public partial class UserFriendly : Form
+    public partial class MainForm : Form
     {
-        public UserFriendly()
+        public MainForm()
         {
             InitializeComponent();
         }

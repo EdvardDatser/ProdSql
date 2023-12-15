@@ -1,6 +1,6 @@
 ﻿namespace ProdSql
 {
-    partial class UserFriendly
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.

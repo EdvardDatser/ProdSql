@@ -45,6 +45,7 @@
             this.PictureBox = new System.Windows.Forms.PictureBox();
             this.imagebtn = new System.Windows.Forms.Button();
             this.Ostabtn = new System.Windows.Forms.Button();
+            this.UserBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
@@ -211,11 +212,22 @@
             this.Ostabtn.UseVisualStyleBackColor = true;
             this.Ostabtn.Click += new System.EventHandler(this.Ostabtn_Click);
             // 
+            // UserBtn
+            // 
+            this.UserBtn.Location = new System.Drawing.Point(454, 125);
+            this.UserBtn.Name = "UserBtn";
+            this.UserBtn.Size = new System.Drawing.Size(105, 23);
+            this.UserBtn.TabIndex = 21;
+            this.UserBtn.Text = "UserView";
+            this.UserBtn.UseVisualStyleBackColor = true;
+            this.UserBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 633);
+            this.Controls.Add(this.UserBtn);
             this.Controls.Add(this.Ostabtn);
             this.Controls.Add(this.imagebtn);
             this.Controls.Add(this.PictureBox);
@@ -262,6 +274,7 @@
         private System.Windows.Forms.PictureBox PictureBox;
         private System.Windows.Forms.Button imagebtn;
         private System.Windows.Forms.Button Ostabtn;
+        private System.Windows.Forms.Button UserBtn;
     }
 }
 

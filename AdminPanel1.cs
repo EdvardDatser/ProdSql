@@ -222,9 +222,6 @@ namespace ProdSql
             }
 
         }
-
-
-
         private void dgv_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ToodeBox.Text = dgv.Rows[e.RowIndex].Cells["ProductName"].Value.ToString();
@@ -272,10 +269,19 @@ namespace ProdSql
             catch (Exception)
             {
 
-                MessageBox.Show("Viga");
+                MessageBox.Show("Viga");    
             }       
         }
         List<string> Tooded_list = new List<string>();
+
+        UserForm UserPOV = new UserForm();
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            UserPOV.ShowDialog();
+        }
+
+        // Otpravka na pochtu, poka ne rabotaet
 
         //private void button1_Click(object sender, EventArgs e)
         //{
